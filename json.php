@@ -17,7 +17,7 @@ interface JsonSerializable  {
 	 * @return mixed data which can be serialized by <b>json_encode</b>,
 	 * which is a value of any type other than a resource.
 	 */
-	abstract public function jsonSerialize();
+	public function jsonSerialize();
 
 }
 

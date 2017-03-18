@@ -1855,7 +1855,7 @@ interface MongoCursorInterface extends Iterator, Traversable {
 	 * </p>
 	 * @return MongoCursorInterface this cursor.
 	 */
-	abstract public function batchSize ($batchSize);
+	public function batchSize ($batchSize);
 
 	/**
 	 * (PECL mongo &gt;=1.5.0)<br/>
@@ -1865,7 +1865,7 @@ interface MongoCursorInterface extends Iterator, Traversable {
 	 * fields for this cursor. If the cursor has started iterating, additional
 	 * information about iteration and the connection will be included.
 	 */
-	abstract public function info ();
+	public function info ();
 
 	/**
 	 * (PECL mongo &gt;=1.5.0)<br/>
@@ -1874,7 +1874,7 @@ interface MongoCursorInterface extends Iterator, Traversable {
 	 * @return bool <b>TRUE</b> if there are more results that have not yet been sent to the
 	 * client, and <b>FALSE</b> otherwise.
 	 */
-	abstract public function dead ();
+	public function dead ();
 
 	/**
 	 * (PECL mongo &gt;=1.5.0)<br/>
@@ -1887,7 +1887,7 @@ interface MongoCursorInterface extends Iterator, Traversable {
 	 * </p>
 	 * @return MongoCursorInterface this cursor.
 	 */
-	abstract public function timeout ($ms);
+	public function timeout ($ms);
 
 	/**
 	 * (PECL mongo &gt;=1.6.0)<br/>
@@ -1895,7 +1895,7 @@ interface MongoCursorInterface extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/mongocursorinterface.getreadpreference.php
 	 * @return array
 	 */
-	abstract public function getReadPreference ();
+	public function getReadPreference ();
 
 	/**
 	 * (PECL mongo &gt;=1.6.0)<br/>
@@ -1905,7 +1905,7 @@ interface MongoCursorInterface extends Iterator, Traversable {
 	 * @param array $tags [optional]
 	 * @return MongoCursorInterface this cursor.
 	 */
-	abstract public function setReadPreference ($read_preference, array $tags = null);
+	public function setReadPreference ($read_preference, array $tags = null);
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0)<br/>
@@ -1913,7 +1913,7 @@ interface MongoCursorInterface extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.current.php
 	 * @return mixed Can return any type.
 	 */
-	abstract public function current ();
+	public function current ();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0)<br/>
@@ -1921,7 +1921,7 @@ interface MongoCursorInterface extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.next.php
 	 * @return void Any returned value is ignored.
 	 */
-	abstract public function next ();
+	public function next ();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0)<br/>
@@ -1929,7 +1929,7 @@ interface MongoCursorInterface extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.key.php
 	 * @return scalar scalar on success, or <b>NULL</b> on failure.
 	 */
-	abstract public function key ();
+	public function key ();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0)<br/>
@@ -1938,7 +1938,7 @@ interface MongoCursorInterface extends Iterator, Traversable {
 	 * @return boolean The return value will be casted to boolean and then evaluated.
 	 * Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	abstract public function valid ();
+	public function valid ();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0)<br/>
@@ -1946,7 +1946,7 @@ interface MongoCursorInterface extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.rewind.php
 	 * @return void Any returned value is ignored.
 	 */
-	abstract public function rewind ();
+	public function rewind ();
 
 }
 

@@ -25,7 +25,7 @@ interface IteratorAggregate extends Traversable {
 	 * @return Traversable An instance of an object implementing <b>Iterator</b> or
 	 * <b>Traversable</b>
 	 */
-	abstract public function getIterator(): Traversable;
+	public function getIterator(): Traversable;
 
 }
 
@@ -42,7 +42,7 @@ interface Iterator extends Traversable {
 	 * @link http://php.net/manual/en/iterator.current.php
 	 * @return mixed Can return any type.
 	 */
-	abstract public function current();
+	public function current();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -50,7 +50,7 @@ interface Iterator extends Traversable {
 	 * @link http://php.net/manual/en/iterator.next.php
 	 * @return void Any returned value is ignored.
 	 */
-	abstract public function next();
+	public function next();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -58,7 +58,7 @@ interface Iterator extends Traversable {
 	 * @link http://php.net/manual/en/iterator.key.php
 	 * @return scalar scalar on success, or <b>NULL</b> on failure.
 	 */
-	abstract public function key();
+	public function key();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -67,7 +67,7 @@ interface Iterator extends Traversable {
 	 * @return boolean The return value will be casted to boolean and then evaluated.
 	 * Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	abstract public function valid(): bool;
+	public function valid(): bool;
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -75,7 +75,7 @@ interface Iterator extends Traversable {
 	 * @link http://php.net/manual/en/iterator.rewind.php
 	 * @return void Any returned value is ignored.
 	 */
-	abstract public function rewind();
+	public function rewind();
 
 }
 
@@ -97,7 +97,7 @@ interface ArrayAccess  {
 	 * <p>
 	 * The return value will be casted to boolean if non-boolean was returned.
 	 */
-	abstract public function offsetExists($offset): bool;
+	public function offsetExists($offset): bool;
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -108,7 +108,7 @@ interface ArrayAccess  {
 	 * </p>
 	 * @return mixed Can return all value types.
 	 */
-	abstract public function offsetGet($offset);
+	public function offsetGet($offset);
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -122,7 +122,7 @@ interface ArrayAccess  {
 	 * </p>
 	 * @return void No value is returned.
 	 */
-	abstract public function offsetSet($offset, $value);
+	public function offsetSet($offset, $value);
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -133,7 +133,7 @@ interface ArrayAccess  {
 	 * </p>
 	 * @return void No value is returned.
 	 */
-	abstract public function offsetUnset($offset);
+	public function offsetUnset($offset);
 
 }
 
@@ -149,7 +149,7 @@ interface Serializable  {
 	 * @link http://php.net/manual/en/serializable.serialize.php
 	 * @return string the string representation of the object or <b>NULL</b>
 	 */
-	abstract public function serialize(): string;
+	public function serialize(): string;
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7)<br/>
@@ -160,7 +160,7 @@ interface Serializable  {
 	 * </p>
 	 * @return void The return value from this method is ignored.
 	 */
-	abstract public function unserialize(string $serialized);
+	public function unserialize(string $serialized);
 
 }
 
@@ -178,7 +178,7 @@ interface Throwable  {
 	 * @link http://php.net/manual/en/throwable.getmessage.php
 	 * @return string the message associated with the thrown object.
 	 */
-	abstract public function getMessage(): string;
+	public function getMessage(): string;
 
 	/**
 	 * (PHP 7)<br/>
@@ -189,7 +189,7 @@ interface Throwable  {
 	 * <b>Exception</b> descendants (for example as
 	 * string in <b>PDOException</b>).
 	 */
-	abstract public function getCode(): int;
+	public function getCode(): int;
 
 	/**
 	 * (PHP 7)<br/>
@@ -197,7 +197,7 @@ interface Throwable  {
 	 * @link http://php.net/manual/en/throwable.getfile.php
 	 * @return string the name of the file from which the object was thrown.
 	 */
-	abstract public function getFile(): string;
+	public function getFile(): string;
 
 	/**
 	 * (PHP 7)<br/>
@@ -205,7 +205,7 @@ interface Throwable  {
 	 * @link http://php.net/manual/en/throwable.getline.php
 	 * @return int the line number where the thrown object was instantiated.
 	 */
-	abstract public function getLine(): int;
+	public function getLine(): int;
 
 	/**
 	 * (PHP 7)<br/>
@@ -214,7 +214,7 @@ interface Throwable  {
 	 * @return array the stack trace as an array in the same format as
 	 * <b>debug_backtrace</b>.
 	 */
-	abstract public function getTrace(): array;
+	public function getTrace(): array;
 
 	/**
 	 * (PHP 7)<br/>
@@ -223,7 +223,7 @@ interface Throwable  {
 	 * @return Throwable the previous <b>Throwable</b> if available, or
 	 * <b>NULL</b> otherwise.
 	 */
-	abstract public function getPrevious(): Throwable;
+	public function getPrevious(): Throwable;
 
 	/**
 	 * (PHP 7)<br/>
@@ -231,7 +231,7 @@ interface Throwable  {
 	 * @link http://php.net/manual/en/throwable.gettraceasstring.php
 	 * @return string the stack trace as a string.
 	 */
-	abstract public function getTraceAsString(): string;
+	public function getTraceAsString(): string;
 
 	/**
 	 * (PHP 7)<br/>
@@ -239,7 +239,7 @@ interface Throwable  {
 	 * @link http://php.net/manual/en/throwable.tostring.php
 	 * @return string the string representation of the thrown object.
 	 */
-	abstract public function __toString(): string;
+	public function __toString(): string;
 
 }
 

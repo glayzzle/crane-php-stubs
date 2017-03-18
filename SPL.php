@@ -1418,7 +1418,7 @@ interface RecursiveIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/recursiveiterator.haschildren.php
 	 * @return bool <b>TRUE</b> if the current entry can be iterated over, otherwise returns <b>FALSE</b>.
 	 */
-	abstract public function hasChildren(): bool;
+	public function hasChildren(): bool;
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7)<br/>
@@ -1426,7 +1426,7 @@ interface RecursiveIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/recursiveiterator.getchildren.php
 	 * @return RecursiveIterator An iterator for the current entry.
 	 */
-	abstract public function getChildren(): RecursiveIterator;
+	public function getChildren(): RecursiveIterator;
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -1434,7 +1434,7 @@ interface RecursiveIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.current.php
 	 * @return mixed Can return any type.
 	 */
-	abstract public function current();
+	public function current();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -1442,7 +1442,7 @@ interface RecursiveIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.next.php
 	 * @return void Any returned value is ignored.
 	 */
-	abstract public function next();
+	public function next();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -1450,7 +1450,7 @@ interface RecursiveIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.key.php
 	 * @return scalar scalar on success, or <b>NULL</b> on failure.
 	 */
-	abstract public function key();
+	public function key();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -1459,7 +1459,7 @@ interface RecursiveIterator extends Iterator, Traversable {
 	 * @return boolean The return value will be casted to boolean and then evaluated.
 	 * Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	abstract public function valid(): bool;
+	public function valid(): bool;
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -1467,7 +1467,7 @@ interface RecursiveIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.rewind.php
 	 * @return void Any returned value is ignored.
 	 */
-	abstract public function rewind();
+	public function rewind();
 
 }
 
@@ -1663,7 +1663,7 @@ interface OuterIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/outeriterator.getinneriterator.php
 	 * @return Iterator The inner iterator for the current entry.
 	 */
-	abstract public function getInnerIterator(): Iterator;
+	public function getInnerIterator(): Iterator;
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -1671,7 +1671,7 @@ interface OuterIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.current.php
 	 * @return mixed Can return any type.
 	 */
-	abstract public function current();
+	public function current();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -1679,7 +1679,7 @@ interface OuterIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.next.php
 	 * @return void Any returned value is ignored.
 	 */
-	abstract public function next();
+	public function next();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -1687,7 +1687,7 @@ interface OuterIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.key.php
 	 * @return scalar scalar on success, or <b>NULL</b> on failure.
 	 */
-	abstract public function key();
+	public function key();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -1696,7 +1696,7 @@ interface OuterIterator extends Iterator, Traversable {
 	 * @return boolean The return value will be casted to boolean and then evaluated.
 	 * Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	abstract public function valid(): bool;
+	public function valid(): bool;
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -1704,7 +1704,7 @@ interface OuterIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.rewind.php
 	 * @return void Any returned value is ignored.
 	 */
-	abstract public function rewind();
+	public function rewind();
 
 }
 
@@ -2216,7 +2216,7 @@ interface Countable  {
 	 * <p>
 	 * The return value is cast to an integer.
 	 */
-	abstract public function count(): int;
+	public function count(): int;
 
 }
 
@@ -2235,7 +2235,7 @@ interface SeekableIterator extends Iterator, Traversable {
 	 * </p>
 	 * @return void No value is returned.
 	 */
-	abstract public function seek(int $position);
+	public function seek(int $position);
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -2243,7 +2243,7 @@ interface SeekableIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.current.php
 	 * @return mixed Can return any type.
 	 */
-	abstract public function current();
+	public function current();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -2251,7 +2251,7 @@ interface SeekableIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.next.php
 	 * @return void Any returned value is ignored.
 	 */
-	abstract public function next();
+	public function next();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -2259,7 +2259,7 @@ interface SeekableIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.key.php
 	 * @return scalar scalar on success, or <b>NULL</b> on failure.
 	 */
-	abstract public function key();
+	public function key();
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -2268,7 +2268,7 @@ interface SeekableIterator extends Iterator, Traversable {
 	 * @return boolean The return value will be casted to boolean and then evaluated.
 	 * Returns <b>TRUE</b> on success or <b>FALSE</b> on failure.
 	 */
-	abstract public function valid(): bool;
+	public function valid(): bool;
 
 	/**
 	 * (PHP 5 &gt;= 5.0.0, PHP 7)<br/>
@@ -2276,7 +2276,7 @@ interface SeekableIterator extends Iterator, Traversable {
 	 * @link http://php.net/manual/en/iterator.rewind.php
 	 * @return void Any returned value is ignored.
 	 */
-	abstract public function rewind();
+	public function rewind();
 
 }
 
@@ -9062,7 +9062,7 @@ interface SplObserver  {
 	 * </p>
 	 * @return void No value is returned.
 	 */
-	abstract public function update(SplSubject $subject);
+	public function update(SplSubject $subject);
 
 }
 
@@ -9082,7 +9082,7 @@ interface SplSubject  {
 	 * </p>
 	 * @return void No value is returned.
 	 */
-	abstract public function attach(SplObserver $observer);
+	public function attach(SplObserver $observer);
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7)<br/>
@@ -9093,7 +9093,7 @@ interface SplSubject  {
 	 * </p>
 	 * @return void No value is returned.
 	 */
-	abstract public function detach(SplObserver $observer);
+	public function detach(SplObserver $observer);
 
 	/**
 	 * (PHP 5 &gt;= 5.1.0, PHP 7)<br/>
@@ -9101,7 +9101,7 @@ interface SplSubject  {
 	 * @link http://php.net/manual/en/splsubject.notify.php
 	 * @return void No value is returned.
 	 */
-	abstract public function notify();
+	public function notify();
 
 }
 

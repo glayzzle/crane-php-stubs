@@ -7,21 +7,21 @@ interface DateTimeInterface  {
 	/**
 	 * @param $format
 	 */
-	abstract public function format($format);
+	public function format($format);
 
-	abstract public function getTimezone();
+	public function getTimezone();
 
-	abstract public function getOffset();
+	public function getOffset();
 
-	abstract public function getTimestamp();
+	public function getTimestamp();
 
 	/**
 	 * @param $object
 	 * @param $absolute [optional]
 	 */
-	abstract public function diff($object, $absolute);
+	public function diff($object, $absolute);
 
-	abstract public function __wakeup();
+	public function __wakeup();
 
 }
 

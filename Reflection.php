@@ -158,7 +158,7 @@ interface Reflector  {
 	 * @link http://php.net/manual/en/reflector.export.php
 	 * @return string
 	 */
-	abstract public static function export(): string;
+	public static function export(): string;
 
 	/**
 	 * (PHP 5, PHP 7)<br/>
@@ -166,7 +166,7 @@ interface Reflector  {
 	 * @link http://php.net/manual/en/reflector.tostring.php
 	 * @return string
 	 */
-	abstract public function __toString(): string;
+	public function __toString(): string;
 
 }
 
@@ -396,7 +396,7 @@ class ReflectionFunctionAbstract implements Reflector {
 	 * @link http://php.net/manual/en/reflector.export.php
 	 * @return string
 	 */
-	abstract public static function export(): string;
+	public static function export(): string {}
 
 	/**
 	 * (PHP 5, PHP 7)<br/>

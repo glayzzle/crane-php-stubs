@@ -24,7 +24,7 @@ interface SessionHandlerInterface  {
 	 * </p>
 	 * @return bool The return value (usually <b>TRUE</b> on success, <b>FALSE</b> on failure). Note this value is returned internally to PHP for processing.
 	 */
-	abstract public function open(string $save_path, string $name): bool;
+	public function open(string $save_path, string $name): bool;
 
 	/**
 	 * (PHP 5 &gt;= 5.4.0, PHP 7)<br/>
@@ -32,7 +32,7 @@ interface SessionHandlerInterface  {
 	 * @link http://php.net/manual/en/sessionhandlerinterface.close.php
 	 * @return bool The return value (usually <b>TRUE</b> on success, <b>FALSE</b> on failure). Note this value is returned internally to PHP for processing.
 	 */
-	abstract public function close(): bool;
+	public function close(): bool;
 
 	/**
 	 * (PHP 5 &gt;= 5.4.0, PHP 7)<br/>
@@ -43,7 +43,7 @@ interface SessionHandlerInterface  {
 	 * </p>
 	 * @return string an encoded string of the read data. If nothing was read, it must return an empty string. Note this value is returned internally to PHP for processing.
 	 */
-	abstract public function read(string $session_id): string;
+	public function read(string $session_id): string;
 
 	/**
 	 * (PHP 5 &gt;= 5.4.0, PHP 7)<br/>
@@ -58,7 +58,7 @@ interface SessionHandlerInterface  {
 	 * </p>
 	 * @return bool The return value (usually <b>TRUE</b> on success, <b>FALSE</b> on failure). Note this value is returned internally to PHP for processing.
 	 */
-	abstract public function write(string $session_id, string $session_data): bool;
+	public function write(string $session_id, string $session_data): bool;
 
 	/**
 	 * (PHP 5 &gt;= 5.4.0, PHP 7)<br/>
@@ -69,7 +69,7 @@ interface SessionHandlerInterface  {
 	 * </p>
 	 * @return bool The return value (usually <b>TRUE</b> on success, <b>FALSE</b> on failure). Note this value is returned internally to PHP for processing.
 	 */
-	abstract public function destroy(string $session_id): bool;
+	public function destroy(string $session_id): bool;
 
 	/**
 	 * (PHP 5 &gt;= 5.4.0, PHP 7)<br/>
@@ -80,13 +80,13 @@ interface SessionHandlerInterface  {
 	 * </p>
 	 * @return bool The return value (usually <b>TRUE</b> on success, <b>FALSE</b> on failure). Note this value is returned internally to PHP for processing.
 	 */
-	abstract public function gc(int $maxlifetime): bool;
+	public function gc(int $maxlifetime): bool;
 
 }
 
 interface SessionIdInterface  {
 
-	abstract public function create_sid();
+	public function create_sid();
 
 }
 
@@ -95,13 +95,13 @@ interface SessionUpdateTimestampHandlerInterface  {
 	/**
 	 * @param $key
 	 */
-	abstract public function validateId($key);
+	public function validateId($key);
 
 	/**
 	 * @param $key
 	 * @param $val
 	 */
-	abstract public function updateTimestamp($key, $val);
+	public function updateTimestamp($key, $val);
 
 }
 
